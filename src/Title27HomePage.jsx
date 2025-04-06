@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Link } from "react-router-dom"; // Add this for routing
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -28,7 +29,7 @@ export default function Title27HomePage() {
         <div className="space-x-4 hidden md:flex">
           <a href="#about" className="hover:underline">About</a>
           <a href="#services" className="hover:underline">Services</a>
-          <a href="/blog" className="hover:underline">Blog</a>
+          <Link to="/blog" className="hover:underline">Blog</Link> {/* Link to Blog */}
           <a href="#contact" className="hover:underline">Contact</a>
         </div>
       </nav>
