@@ -7,5 +7,8 @@ export default defineConfig({
   plugins: [react()],
   define: {
     'process.env': {}
+  },
+  optimizeDeps: {
+    include: ['framer-motion']  // Explicitly include framer-motion in the build step
   }
 })
