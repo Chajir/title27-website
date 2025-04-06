@@ -3,10 +3,12 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./public/**/*.{html,js}",  // Ensure everything in the public folder is included
+    "./public/**/*.{html,js}",
   ],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),  // Adding the forms plugin
+  ],
 }
