@@ -1,1 +1,8 @@
-body { margin: 0; font-family: Arial, sans-serif; background: #fff; color: #111; }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white text-slate-900;
+}
