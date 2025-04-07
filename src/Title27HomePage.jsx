@@ -18,21 +18,55 @@ const staggerContainer = {
 
 export default function Title27HomePage() {
   const [showForm, setShowForm] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
       {/* Navigation */}
-      <nav className="bg-white shadow px-6 py-4 flex justify-between items-center sticky top-0 z-50">
-        <div className="flex items-center space-x-2">
-          <span className="text-xl font-semibold">Title 27, LLC</span>
-        </div>
-        <div className="space-x-4 hidden md:flex">
-          <a href="#about" className="hover:underline">About</a>
-          <a href="#services" className="hover:underline">Services</a>
-          <Link to="/blog" className="hover:underline">Blog</Link> {/* Link to Blog */}
-          <a href="#contact" className="hover:underline">Contact</a>
-        </div>
-      </nav>
+      <nav className="bg-white shadow px-6 py-4 sticky top-0 z-50">
+  <div className="flex justify-between items-center">
+    <span className="text-xl font-semibold">Title 27, LLC</span>
+
+    {/* Hamburger Menu Button */}
+    <button
+      className="md:hidden"
+      onClick={() => setMenuOpen(!menuOpen)}
+      aria-label="Toggle menu"
+    >
+      <svg
+        className="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d={menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+        />
+      </svg>
+    </button>
+
+    {/* Desktop Menu */}
+    <div className="hidden md:flex space-x-6">
+      <a href="#about" className="hover:underline">About</a>
+      <a href="#services" className="hover:underline">Services</a>
+      <Link to="/blog" className="hover:underline">Blog</Link>
+      <a href="#contact" className="hover:underline">Contact</a>
+    </div>
+  </div>
+
+  {/* Mobile Menu */}
+  {menuOpen && (
+    <div className="mt-4 md:hidden space-y-2">
+      <a href="#about" className="block hover:underline">About</a>
+      <a href="#services" className="block hover:underline">Services</a>
+      <Link to="/blog" className="block hover:underline">Blog</Link>
+      <a href="#contact" className="block hover:underline">Contact</a>
+    </div>
+  )}
+</nav>
 
       {/* Hero Section */}
       <motion.section 
