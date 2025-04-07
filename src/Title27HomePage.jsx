@@ -130,14 +130,39 @@ export default function Title27HomePage() {
           <div className="bg-white rounded-xl shadow-xl p-6 w-full max-w-md relative">
             <button onClick={() => setShowForm(false)} className="absolute top-3 right-4 text-lg">×</button>
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-            <form className="space-y-4">
-              <input type="text" placeholder="Your Name" className="w-full border p-2 rounded" />
-              <input type="email" placeholder="Your Email" className="w-full border p-2 rounded" />
-              <textarea placeholder="Your Message" className="w-full border p-2 rounded h-24" />
-              <button type="submit" className="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-                Submit
-              </button>
-            </form>
+            <form
+  action="https://formspree.io/f/mkgjpzdp" // ← replace this with your real Formspree URL
+  method="POST"
+  className="space-y-4"
+>
+  <input
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    className="w-full border p-2 rounded"
+    required
+  />
+  <input
+    type="email"
+    name="email"
+    placeholder="Your Email"
+    className="w-full border p-2 rounded"
+    required
+  />
+  <textarea
+    name="message"
+    placeholder="Your Message"
+    className="w-full border p-2 rounded h-24"
+    required
+  ></textarea>
+  <button
+    type="submit"
+    className="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+  >
+    Submit
+  </button>
+</form>
+
           </div>
         </div>
       )}
