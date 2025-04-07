@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Title27HomePage from './Title27HomePage';
 import Blog from './Blog';
 import WhatIsTitleInsurance from './posts/WhatIsTitleInsurance';
+import ImportanceOfTitleCompany from './posts/ImportanceOfTitleCompany';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Router>
