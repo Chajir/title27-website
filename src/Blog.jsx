@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 export default function Blog() {
   const posts = [
     {
+      title: "The Importance of Choosing to Close Deals with a Title Company in Florida",
+      slug: "importance-of-title-company",
+      excerpt: "Discover why closing with a title company is essential for smooth real estate transactions in Florida.",
+    },
+    {
       title: "What Is Title Insurance?",
       slug: "what-is-title-insurance",
       excerpt: "Learn the basics of title insurance and how it protects your real estate investment.",
