@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // Add this for routing
 
 const fadeIn = {
@@ -19,7 +19,16 @@ const staggerContainer = {
 export default function Title27HomePage() {
   const [showForm, setShowForm] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
+  useEffect(() => {
+    if (showForm && window.grecaptcha) {
+      window.grecaptcha.ready(() => {
+        window.grecaptcha.render("g-recaptcha", {
+          sitekey: "6LdgBg8rAAAAAL2-SnuKKhSWzKpdCQSofaA7P2X9",
+        });
+      });
+    }
+  }, [showForm]);
+  
   return (
     <div className="min-h-screen bg-white text-slate-900">
       {/* Navigation */}
@@ -186,53 +195,56 @@ export default function Title27HomePage() {
 </motion.section>
 
 
-      {/* Contact Form Modal */}
-      {showForm && (
-        <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50">
-          <div className="bg-white rounded-xl shadow-xl p-6 w-full max-w-md relative">
-            <button onClick={() => setShowForm(false)} className="absolute top-3 right-4 text-lg">×</button>
-            <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-            <form
-  action="https://formspree.io/f/mkgjpzdp" // ← replace this with your real Formspree URL
-  method="POST"
-  className="space-y-4"
->
-  <input
-    type="text"
-    name="name"
-    placeholder="Your Name"
-    className="w-full border p-2 rounded"
-    required
-  />
-  <input
-    type="email"
-    name="email"
-    placeholder="Your Email"
-    className="w-full border p-2 rounded"
-    required
-  />
-  <textarea
-    name="message"
-    placeholder="Your Message"
-    className="w-full border p-2 rounded h-24"
-    required
-  ></textarea>
-  <div 
-    className="g-recaptcha" 
-    data-sitekey="6LdgBg8rAAAAAL2-SnuKKhSWzKpdCQSofaA7P2X9"
-  ></div>
+{/* Contact Form Modal */}
+{showForm && (
+  <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50">
+    <div className="bg-white rounded-xl shadow-xl p-6 w-full max-w-md relative">
+      <button
+        onClick={() => setShowForm(false)}
+        className="absolute top-3 right-4 text-lg"
+      >
+        ×
+      </button>
+      <h3 className="text-xl font-bold mb-4">Contact Us</h3>
+      <form
+        action="https://formspree.io/f/mkgjpzdp"
+        method="POST"
+        className="space-y-4"
+      >
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          className="w-full border p-2 rounded"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          className="w-full border p-2 rounded"
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          className="w-full border p-2 rounded h-24"
+          required
+        ></textarea>
 
-  <button
-    type="submit"
-    className="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-  >
-    Submit
-  </button>
-</form>
+        {/* reCAPTCHA container */}
+        <div id="g-recaptcha" className="flex justify-center" />
 
-          </div>
-        </div>
-      )}
+        <button
+          type="submit"
+          className="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+)}
 
       {/* Footer */}
       <footer className="bg-white border-t text-center text-sm text-slate-500 py-6">
