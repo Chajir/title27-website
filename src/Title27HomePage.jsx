@@ -28,9 +28,9 @@ export default function Title27HomePage() {
     
     {/* Logo + Brand Name */}
     <div className="flex items-center space-x-2">
-    <img src="/title27-logo.png" alt="Title 27 Logo" className="h-10" />
-    <span className="text-xl font-semibold hidden sm:inline">Title 27, LLC</span>
-      </div>
+    <img src="/title27-logo.png" alt="Title 27 Logo" className="h-10 w-auto" />
+    <span className="text-xl font-semibold">Title 27, LLC</span>
+    </div>
 
     {/* Hamburger Menu Button */}
     <button
