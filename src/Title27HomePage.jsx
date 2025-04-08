@@ -217,7 +217,11 @@ export default function Title27HomePage() {
     className="w-full border p-2 rounded h-24"
     required
   ></textarea>
-  <div className="g-recaptcha" data-sitekey="6LdgBg8rAAAAAL2-SnuKKhSWzKpdCQSofaA7P2X9"></div>
+  <div 
+    className="g-recaptcha" 
+    data-sitekey="6LdgBg8rAAAAAL2-SnuKKhSWzKpdCQSofaA7P2X9"
+  ></div>
+
   <button
     type="submit"
     className="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
