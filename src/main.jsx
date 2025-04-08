@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path="/" element={<Title27HomePage />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/what-is-title-insurance" element={<BlogPost postPath="/posts-md/what-is-title-insurance.md" />} />
-<Route path="/blog/importance-of-title-company" element={<BlogPost postPath="/posts-md/importance-of-title-company.md" />} />
+      <Route path="/blog/importance-of-title-company" element={<BlogPost postPath="/posts-md/importance-of-title-company.md" />} />
     </Routes>
   </Router>
 );
