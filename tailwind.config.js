@@ -2,10 +2,25 @@
 module.exports = {
   content: [
     './index.html',
-    './src/**/*.{js,ts,jsx,tsx}', // Ensure this is in place
+    './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            h2: {
+              color: '#1e293b', // slate-800
+              fontWeight: '700',
+            },
+            h3: {
+              color: '#1e293b', // slate-800
+              fontWeight: '600',
+            },
+          },
+        },
+      },
+    },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }
