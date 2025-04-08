@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import matter from "gray-matter";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 import { Buffer } from 'buffer';
 window.Buffer = Buffer;
 
@@ -23,16 +25,18 @@ export default function BlogPost({ postPath }) {
         <img
           src={post.data.banner}
           alt="Banner"
-          className="w-full h-auto mb-6 rounded-lg shadow"
-        />
+          className="w-full max-w-4xl h-64 object-cover rounded-lg mx-auto mb-6 shadow"
+          />
       )}
       <h1 className="text-4xl font-bold mb-2">{post.data.title}</h1>
       <p className="text-slate-500 text-sm mb-6">Published: {post.data.date}</p>
 
-      {/* Use a wrapper div to style markdown instead */}
       <div className="prose prose-lg text-slate-700">
-        <ReactMarkdown>{post.content}</ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+          {post.content}
+        </ReactMarkdown>
       </div>
     </div>
   );
 }
+
