@@ -25,7 +25,12 @@ export default function Title27HomePage() {
       {/* Navigation */}
       <nav className="bg-white shadow px-6 py-4 sticky top-0 z-50">
   <div className="flex justify-between items-center">
-    <span className="text-xl font-semibold">Title 27, LLC</span>
+    
+    {/* Logo + Brand Name */}
+    <div className="flex items-center space-x-2">
+    <img src="/title27-logo.png" alt="Title 27 Logo" className="h-10" />
+    <span className="text-xl font-semibold hidden sm:inline">Title 27, LLC</span>
+      </div>
 
     {/* Hamburger Menu Button */}
     <button
