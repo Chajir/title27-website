@@ -142,26 +142,49 @@ export default function Title27HomePage() {
         </div>
       </motion.section>
 
-      {/* Contact Section */}
-      <motion.section 
-        id="contact"
-        className="py-16 px-6 bg-slate-100 text-center"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
-      >
-        <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
-        <p className="mb-2">Chajir Ale Dargham, Partner</p>
-        <p className="mb-2">Phone: 786-870-7248</p>
-        <p className="mb-4">Email: floridatitle27@gmail.com</p>
-        <button 
-          onClick={() => setShowForm(true)} 
-          className="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition"
-        >
-          Send a Message
-        </button>
-      </motion.section>
+{/* Contact Section */}
+<motion.section 
+  id="contact"
+  className="py-16 px-6 bg-slate-100 text-center"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  variants={fadeIn}
+>
+  <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
+
+  <p className="mb-2 font-medium">📍 Address:</p>
+  <p className="mb-4">3750 NW 87th Ave # 700, Doral, FL 33178</p>
+
+  <p className="mb-2 font-medium">✉️ Email:</p>
+  <p className="mb-4">
+    <a href="mailto:contact@title27llc.com" className="text-blue-600 hover:underline">
+      contact@title27llc.com
+    </a>
+  </p>
+
+  <div className="mt-6 max-w-2xl mx-auto">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.823181073615!2d-80.33536082476737!3d25.81007310726847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b9983c9efb25%3A0x35fbe0c2964d6ce7!2s3750%20NW%2087th%20Ave%20%23700%2C%20Doral%2C%20FL%2033178!5e0!3m2!1sen!2sus!4v1712594577281!5m2!1sen!2sus"
+      width="100%"
+      height="300"
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      className="rounded-lg shadow"
+    />
+  </div>
+
+  <div className="mt-6">
+    <button 
+      onClick={() => setShowForm(true)} 
+      className="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition"
+    >
+      Send a Message
+    </button>
+  </div>
+</motion.section>
+
 
       {/* Contact Form Modal */}
       {showForm && (
