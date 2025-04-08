@@ -24,7 +24,9 @@ export default function BlogPost({ postPath }) {
         />
       )}
       <h1 className="text-4xl font-bold mb-4">{post.data.title}</h1>
-      <p className="text-slate-500 text-sm mb-6">Published: {post.data.date}</p>
+      <p className="text-slate-500 text-sm mb-6">
+        Published: {post.data.date}
+      </p>
       <ReactMarkdown className="prose prose-lg text-slate-700">
         {post.content}
       </ReactMarkdown>
