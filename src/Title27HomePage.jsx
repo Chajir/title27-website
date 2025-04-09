@@ -19,6 +19,16 @@ const staggerContainer = {
 export default function Title27HomePage() {
   const [showForm, setShowForm] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+useEffect(() => {
+  if (isDarkMode) {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+}, [isDarkMode]);
+
   useEffect(() => {
     if (showForm && window.grecaptcha) {
       window.grecaptcha.ready(() => {
@@ -30,7 +40,7 @@ export default function Title27HomePage() {
   }, [showForm]);
   
   return (
-    <div className="min-h-screen bg-white text-slate-900">
+    <div className="min-h-screen bg-white text-slate-900 dark:bg-slate-900 dark:text-white transition-colors duration-300">  
       {/* Navigation */}
       <nav className="bg-white shadow px-6 py-4 sticky top-0 z-50">
   <div className="flex justify-between items-center">
@@ -40,6 +50,12 @@ export default function Title27HomePage() {
     <img src="/title27-logo.png" alt="Title 27 Logo" className="h-10 w-auto" />
     <span className="text-xl font-semibold">Title 27, LLC</span>
     </div>
+    <button
+  onClick={() => setIsDarkMode(!isDarkMode)}
+  className="ml-4 px-3 py-1 border border-slate-300 rounded text-sm hover:bg-slate-100 dark:hover:bg-slate-800"
+>
+  {isDarkMode ? '☀️ Light' : '🌙 Dark'}
+</button>
 
     {/* Hamburger Menu Button */}
     <button
