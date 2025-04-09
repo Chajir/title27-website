@@ -214,7 +214,7 @@ useEffect(() => {
 {/* Contact Form Modal */}
 {showForm && (
   <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50">
-    <div className="bg-white rounded-xl shadow-xl p-6 w-full max-w-md relative">
+    <div className="bg-white dark:bg-slate-800 dark:text-white rounded-xl shadow-xl p-6 w-full max-w-md relative">
       <button
         onClick={() => setShowForm(false)}
         className="absolute top-3 right-4 text-lg"
@@ -231,20 +231,20 @@ useEffect(() => {
           type="text"
           name="name"
           placeholder="Your Name"
-          className="w-full border p-2 rounded"
+          className="w-full border border-gray-300 dark:border-gray-600 p-2 rounded bg-white dark:bg-gray-700 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
           required
         />
         <input
           type="email"
           name="email"
           placeholder="Your Email"
-          className="w-full border p-2 rounded"
+          className="w-full border border-gray-300 dark:border-gray-600 p-2 rounded bg-white dark:bg-gray-700 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
           required
         />
         <textarea
           name="message"
           placeholder="Your Message"
-          className="w-full border p-2 rounded h-24"
+          className="w-full border border-gray-300 dark:border-gray-600 p-2 rounded bg-white dark:bg-gray-700 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 h-24"
           required
         ></textarea>
 
