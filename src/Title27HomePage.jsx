@@ -42,7 +42,7 @@ useEffect(() => {
   return (
     <div className="min-h-screen bg-white text-slate-900 dark:bg-slate-900 dark:text-white transition-colors duration-300">  
       {/* Navigation */}
-      <nav className="bg-white shadow px-6 py-4 sticky top-0 z-50">
+      <nav className="bg-white dark:bg-slate-900 shadow px-6 py-4 sticky top-0 z-50 transition-colors duration-300">
   <div className="flex justify-between items-center">
     
     {/* Logo + Brand Name */}
@@ -154,8 +154,8 @@ useEffect(() => {
             <motion.div 
               key={title} 
               variants={fadeIn} 
-              className="bg-slate-100 p-6 rounded-xl shadow hover:shadow-md transition"
-            >
+              className="bg-slate-100 dark:bg-slate-800 p-6 rounded-xl shadow hover:shadow-md transition text-slate-700 dark:text-slate-100"
+              >
               <h3 className="text-xl font-semibold mb-2">{title}</h3>
               <p className="text-slate-700">
                 {title === "Title Insurance" && "Protect your property rights with comprehensive title insurance coverage backed by industry expertise."}
