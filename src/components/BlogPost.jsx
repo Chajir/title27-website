@@ -20,7 +20,8 @@ export default function BlogPost({ postPath }) {
   }, [postPath]);
 
   return (
-    <div className="max-w-3xl mx-auto p-6">
+    <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-white transition-colors duration-300">
+     <div className="max-w-3xl mx-auto p-6">
       {post.data.banner && (
         <img
           src={post.data.banner}
@@ -31,10 +32,10 @@ export default function BlogPost({ postPath }) {
       <h1 className="text-4xl font-bold mb-2">{post.data.title}</h1>
       <p className="text-slate-500 text-sm mb-6">Published: {post.data.date}</p>
 
-      <div className="prose prose-lg text-slate-700">
-        <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
-          {post.content}
-        </ReactMarkdown>
+      <div className="prose prose-lg text-slate-700 dark:prose-invert">
+       <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+       {post.content}
+       </ReactMarkdown>
       </div>
     </div>
   );
