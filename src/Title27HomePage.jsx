@@ -100,7 +100,7 @@ useEffect(() => {
 
       {/* Hero Section */}
       <motion.section 
-        className="relative bg-gradient-to-r from-slate-900 to-black text-white py-20 text-center"
+        className="relative bg-gradient-to-r from-slate-900 to-black text-white py-20 text-center dark:from-slate-800 dark:to-slate-900"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -127,7 +127,7 @@ useEffect(() => {
       {/* About Section */}
       <motion.section 
         id="about"
-        className="py-16 px-6 bg-gray-50 text-center"
+        className="py-16 px-6 bg-gray-50 text-center dark:bg-slate-800"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -142,7 +142,7 @@ useEffect(() => {
       {/* Services Section */}
       <motion.section 
         id="services"
-        className="py-16 px-6 bg-white"
+        className="py-16 px-6 bg-white dark:bg-slate-900"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -170,7 +170,7 @@ useEffect(() => {
 {/* Contact Section */}
 <motion.section 
   id="contact"
-  className="py-16 px-6 bg-slate-100 text-center"
+  className="py-16 px-6 bg-slate-100 dark:bg-slate-800 text-center"
   initial="hidden"
   whileInView="visible"
   viewport={{ once: true }}
@@ -249,7 +249,7 @@ useEffect(() => {
         ></textarea>
 
         {/* reCAPTCHA container */}
-        <div id="g-recaptcha" className="flex justify-center" />
+        <div id="g-recaptcha" className="flex justify-center"></div>
 
         <button
           type="submit"
@@ -262,10 +262,10 @@ useEffect(() => {
   </div>
 )}
 
-      {/* Footer */}
-      <footer className="bg-white border-t text-center text-sm text-slate-500 py-6">
-        &copy; {new Date().getFullYear()} Title 27, LLC. All rights reserved.
-      </footer>
+{/* Footer */}
+<footer className="bg-white dark:bg-gray-800 border-t text-center text-sm text-slate-500 dark:text-slate-400 py-6">
+  &copy; {new Date().getFullYear()} Title 27, LLC. All rights reserved.
+</footer>
     </div>
   );
 }
