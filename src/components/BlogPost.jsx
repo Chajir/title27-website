@@ -38,6 +38,6 @@ export default function BlogPost({ postPath }) {
        </ReactMarkdown>
       </div>
     </div>
+  </div>
   );
 }
-
