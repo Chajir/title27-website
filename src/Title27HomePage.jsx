@@ -54,7 +54,7 @@ useEffect(() => {
             <button
               onClick={() => setIsDarkMode(!isDarkMode)}
               aria-label="Toggle dark mode"
-              className="ml-4 px-3 py-1 border border-slate-300 rounded text-sm hover:bg-slate-100 dark:hover:bg-slate-800"
+              className="ml-4 px-3 py-1 border border-slate-300 rounded text-sm hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               {isDarkMode ? '☀️ Light' : '🌙 Dark'}
             </button>
@@ -62,6 +62,7 @@ useEffect(() => {
               className="md:hidden"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
+              className="focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round"
@@ -69,20 +70,20 @@ useEffect(() => {
               </svg>
             </button>
             <div className="hidden md:flex space-x-6">
-              <a href="#about" className="hover:underline">About</a>
-              <a href="#services" className="hover:underline">Services</a>
-              <Link to="/blog" className="hover:underline">Blog</Link>
-              <a href="#contact" className="hover:underline">Contact</a>
+              <a href="#about" className="hover:underline focus:ring-2 focus:ring-blue-500">About</a>
+              <a href="#services" className="hover:underline focus:ring-2 focus:ring-blue-500">Services</a>
+              <Link to="/blog" className="hover:underline focus:ring-2 focus:ring-blue-500">Blog</Link>
+              <a href="#contact" className="hover:underline focus:ring-2 focus:ring-blue-500">Contact</a>
             </div>
           </div>
   
           {/* Mobile Nav */}
           {menuOpen && (
             <div className="mt-4 md:hidden space-y-2">
-              <a href="#about" className="block hover:underline">About</a>
-              <a href="#services" className="block hover:underline">Services</a>
-              <Link to="/blog" className="block hover:underline">Blog</Link>
-              <a href="#contact" className="block hover:underline">Contact</a>
+              <a href="#about" className="block hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500">About</a>
+              <a href="#services" className="block hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500">Services</a>
+              <Link to="/blog" className="block hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500">Blog</Link>
+              <a href="#contact" className="block hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500">Contact</a>
             </div>
           )}
         </nav>
@@ -106,7 +107,7 @@ useEffect(() => {
             <motion.div variants={fadeIn}>
               <button
                 onClick={() => setShowForm(true)}
-                className="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition"
+                className="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-400"
               >
                 Get Started
               </button>
@@ -156,7 +157,7 @@ useEffect(() => {
             />
           </div>
           <div className="mt-6">
-            <button onClick={() => setShowForm(true)} className="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition">
+            <button onClick={() => setShowForm(true)} className="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-400">
               Send a Message
             </button>
           </div>
@@ -182,7 +183,7 @@ useEffect(() => {
               <label htmlFor="message" className="sr-only">Message</label>
               <textarea id="message" name="message" placeholder="Your Message" aria-label="Your Message" required className="w-full p-2 rounded border bg-white dark:bg-gray-700 text-black dark:text-white h-24"></textarea>
               <div id="g-recaptcha" className="flex justify-center" />
-              <button type="submit" className="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Submit</button>
+              <button type="submit" className="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-400">Submit</button>
             </form>
           </div>
         </div>
