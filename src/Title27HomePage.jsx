@@ -59,10 +59,9 @@ useEffect(() => {
               {isDarkMode ? '☀️ Light' : '🌙 Dark'}
             </button>
             <button
-              className="md:hidden"
+              className="md:hidden focus:outline-none focus:ring-2 focus:ring-blue-500"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
-              className="focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round"
