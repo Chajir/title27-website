@@ -32,4 +32,4 @@ Sellers benefit from having a professional verify ownership. Buyers get peace of
 
 Not all title companies are created equal. Choose a firm like ours with experience, transparency, and local knowledge to ensure your closing is smooth and secure.
 
-For more information about our Services [Click Here](/https://www.title27llc.com/#services)
+For more information about our Services [Click Here](/#services)
