@@ -12,6 +12,11 @@ const posts = [
     title: "The Importance of Choosing to Close Deals with a Title Company in Florida",
     date: "April 8, 2025",
   },
+  {
+    slug: "common-title-issues",
+    title: "Common Title Issues That Can Delay Your Real Estate Closing",
+    date: "April 11, 2025",
+  },
 ];
 
 export default function Blog() {
