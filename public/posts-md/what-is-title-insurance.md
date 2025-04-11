@@ -1,7 +1,8 @@
 ---
-title: "What Is Title Insurance?"
+title: "What Is Title Insurance and Why It Matters for Florida Real Estate"
 date: "April 7, 2025"
 banner: "/images/title-insurance-banner.jpg"
+description: "Understand how title insurance protects Florida homeowners and why it’s essential for real estate transactions in Miami-Dade and beyond."
 ---
 
 Buying a home or commercial property in Miami or anywhere in Florida is a major investment. One of the most important steps in protecting that investment is understanding title insurance—and why working with a local title company makes all the difference.
@@ -31,7 +32,7 @@ A Florida-based title company will conduct a thorough title search, flag potenti
 
 In many Florida counties, including Miami-Dade and Broward, the buyer is responsible for choosing the title company and purchasing the title insurance policy. This makes it especially important to work with a company you trust—like one that knows local laws and county-specific closing customs.
 
-Want to learn more about the importance of using a title company in Florida? [Check out this article](/importance-of-title-company.md) 
+Want to learn more about the importance of using a title company in Florida? [Check out this article](/blog/importance-of-title-company) 
 
 ## One-Time Cost, Lifetime Protection
 
