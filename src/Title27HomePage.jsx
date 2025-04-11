@@ -101,7 +101,7 @@ useEffect(() => {
               Secure. Reliable. Professional.
             </motion.h1>
             <motion.p className="text-lg text-slate-300 mb-6" variants={fadeIn}>
-              Title 27, LLC is your trusted partner in real estate title services across Florida.
+            Title 27, LLC is your trusted partner for title insurance and real estate closings in Miami, Doral, Hialeah and the greater South Florida area.
             </motion.p>
             <motion.div variants={fadeIn}>
               <button
@@ -114,13 +114,24 @@ useEffect(() => {
           </div>
         </motion.section>
   
-        {/* About Section */}
-        <motion.section id="about" className="py-16 px-6 bg-gray-50 text-center dark:bg-slate-800" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
-          <h2 className="text-3xl font-bold mb-4">Who We Are</h2>
-          <p className="max-w-2xl mx-auto text-slate-600">
-            Title 27, LLC is dedicated to delivering accurate and efficient title and closing services.
-          </p>
-        </motion.section>
+{/* About Section */}
+<motion.section 
+  id="about" 
+  className="py-16 px-6 bg-gray-50 text-center dark:bg-slate-800" 
+  initial="hidden" 
+  whileInView="visible" 
+  viewport={{ once: true }} 
+  variants={fadeIn}
+>
+  <h2 className="text-3xl font-bold mb-4">Who We Are</h2>
+  <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-300 mb-4">
+    Title 27, LLC is dedicated to delivering accurate and efficient title and closing services. With a focus on customer satisfaction and a deep understanding of Florida real estate law, we make the title process seamless for buyers, sellers, agents, and lenders.
+  </p>
+  <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-300">
+    Title 27, LLC proudly serves Doral, Miami, Hialeah and the greater Miami-Dade area with expert title insurance and real estate closing services. Whether you're buying a home in Coral Gables, refinancing in Hialeah, or closing on commercial property in Downtown Miami, our experienced team ensures a smooth, secure process.
+  </p>
+</motion.section>
+
   
         {/* Services Section */}
         <motion.section id="services" className="py-16 px-6 bg-white dark:bg-slate-900" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
@@ -130,9 +141,9 @@ useEffect(() => {
               <motion.div key={title} variants={fadeIn} className="bg-slate-100 dark:bg-slate-800 p-6 rounded-xl shadow hover:shadow-md transition text-slate-700 dark:text-slate-100">
                 <h3 className="text-xl font-semibold mb-2">{title}</h3>
                 <p>
-                  {title === "Title Insurance" && "Protect your property rights with title insurance coverage."}
-                  {title === "Escrow & Closings" && "We manage closings with professionalism and precision."}
-                  {title === "Lien & Title Search" && "We provide accurate lien and title searches."}
+                  {title === "Title Insurance" && "Protect your investment with title insurance from a trusted title company in Miami-Dade."}
+                  {title === "Escrow & Closings" && "Protect your investment with title insurance from a trusted title company in Miami-Dade."}
+                  {title === "Lien & Title Search" && "Get fast, accurate lien and title searches backed by Florida real estate expertise."}
                 </p>
               </motion.div>
             ))}
