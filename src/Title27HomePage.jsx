@@ -133,22 +133,37 @@ useEffect(() => {
 </motion.section>
 
   
-        {/* Services Section */}
-        <motion.section id="services" className="py-16 px-6 bg-white dark:bg-slate-900" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
-          <h2 className="text-3xl font-bold text-center mb-10">Our Services</h2>
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {["Title Insurance", "Escrow & Closings", "Lien & Title Search"].map((title) => (
-              <motion.div key={title} variants={fadeIn} className="bg-slate-100 dark:bg-slate-800 p-6 rounded-xl shadow hover:shadow-md transition text-slate-700 dark:text-slate-100">
-                <h3 className="text-xl font-semibold mb-2">{title}</h3>
-                <p>
-                  {title === "Title Insurance" && "Protect your investment with title insurance from a trusted title company in Miami-Dade."}
-                  {title === "Escrow & Closings" && "Protect your investment with title insurance from a trusted title company in Miami-Dade."}
-                  {title === "Lien & Title Search" && "Get fast, accurate lien and title searches backed by Florida real estate expertise."}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
+{/* Services Section */}
+<motion.section id="services" className="py-16 px-6 bg-white dark:bg-slate-900" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
+  <h2 className="text-3xl font-bold text-center mb-10">Our Services</h2>
+  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+    <motion.div variants={fadeIn} className="bg-slate-100 dark:bg-slate-800 p-6 rounded-xl shadow hover:shadow-md transition text-slate-700 dark:text-slate-100">
+      <h3 className="text-xl font-semibold mb-2">Title Insurance</h3>
+      <p>
+        Protect your real estate investment with title insurance from a trusted title company in Miami-Dade. We help you close with confidence by ensuring your title is clear and your interests are protected.
+      </p>
+    </motion.div>
+    <motion.div variants={fadeIn} className="bg-slate-100 dark:bg-slate-800 p-6 rounded-xl shadow hover:shadow-md transition text-slate-700 dark:text-slate-100">
+      <h3 className="text-xl font-semibold mb-2">Escrow & Closings</h3>
+      <p>
+        Our experienced team manages the entire closing process, from escrow to final signature. We ensure a smooth and secure transaction for buyers, sellers, and real estate agents across South Florida.
+      </p>
+    </motion.div>
+    <motion.div variants={fadeIn} className="bg-slate-100 dark:bg-slate-800 p-6 rounded-xl shadow hover:shadow-md transition text-slate-700 dark:text-slate-100">
+      <h3 className="text-xl font-semibold mb-2">Lien & Title Search</h3>
+      <p>
+        Get fast and accurate lien and title searches. We uncover hidden issues before they become costly problems, providing peace of mind to clients in Doral, Hialeah, Coral Gables, and beyond.
+      </p>
+    </motion.div>
+    <motion.div variants={fadeIn} className="bg-slate-100 dark:bg-slate-800 p-6 rounded-xl shadow hover:shadow-md transition text-slate-700 dark:text-slate-100">
+      <h3 className="text-xl font-semibold mb-2">Mobile Closings</h3>
+      <p>
+        Can’t make it to our office? No problem. We offer mobile closing services throughout Miami-Dade County—bringing the closing table to your home, office, or preferred location.
+      </p>
+    </motion.div>
+  </div>
+</motion.section>
+
   
         {/* Contact Section */}
         <motion.section id="contact" className="py-16 px-6 bg-slate-100 dark:bg-slate-800 text-center" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
