@@ -14,6 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/what-is-title-insurance" element={<BlogPost postPath="/posts-md/what-is-title-insurance.md" />} />
       <Route path="/blog/importance-of-title-company" element={<BlogPost postPath="/posts-md/importance-of-title-company.md" />} />
+      <Route path="/blog/common-title-issues" element={<BlogPost postPath="/posts-md/common-title-issues.md" />} />
     </Routes>
   </Router>
 );
