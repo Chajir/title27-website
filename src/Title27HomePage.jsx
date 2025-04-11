@@ -128,7 +128,7 @@ useEffect(() => {
     Title 27, LLC is dedicated to delivering accurate and efficient title and closing services. With a focus on customer satisfaction and a deep understanding of Florida real estate law, we make the title process seamless for buyers, sellers, agents, and lenders.
   </p>
   <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-300">
-    Title 27, LLC proudly serves Doral, Miami, Hialeah and the greater Miami-Dade area with expert title insurance and real estate closing services. Whether you're buying a home in Coral Gables, refinancing in Hialeah, or closing on commercial property in Downtown Miami, our experienced team ensures a smooth, secure process.
+    We proudly serve Doral, Miami, Hialeah and the greater Miami-Dade area with expert title insurance and real estate closing services. Whether you're buying a home in Coral Gables, refinancing in Hialeah, or closing on commercial property in Downtown Miami, our experienced team ensures a smooth, secure process.
   </p>
 </motion.section>
 
